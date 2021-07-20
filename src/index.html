@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Urna Eletrônica</title>
+        <link rel="stylesheet" href="estilo.css"/>
+    </head>
+    <body>
+        <audio id="sound" src="music/som.mp3"></audio>
+
+        <div class="container">
+            <div class="tela">
+                 <div class="p1">
+                    <div class="p1-info">
+                        <div class="p1-info1">
+                            <span>SEU VOTO PARA</span>
+                        </div>
+                        <div class="p1-info2">
+                            <span>PREFEITO</span>
+                        </div>
+                        <div class="p1-info3">
+                            <div class="numero pisca"><b>3</b></div>
+                            <div class="numero"><b></b></div>
+                        </div>
+                        <div class="p1-info4">
+                            Nome:<br/>
+                            Partido:<br/>
+                            Vice:
+                        </div>
+                    </div>
+                    <div class="p1-image">
+                        <div class="p1-image1">
+                            <img src="images/01.png"/>
+                        </div>
+                        <div class="p1-image1 small">
+                            <img src="images/01_2.png"/>
+                        </div>                        
+                    </div>
+                 </div>
+                 <div class="p2">
+                    A tecla <b>CONFIRMA</b> confimará este voto!<br/>
+                    A tecla <b>CORRIGE</b> irá reiniciar seu voto!<br/>
+                    A tecla <b>BRANCO</b> confirma seu voto em branco!
+                 </div>
+            </div>
+            <div class="teclado">
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="cliclou('1')">1</div>
+                    <!-- onclick="clicou('1') exemplo de como passar uma função com parâmtro para quando o botão for cliclado -->
+                    <div class="teclado-botao" onclick="cliclou('2')">2</div>
+                    <div class="teclado-botao" onclick="cliclou('3')">3</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="cliclou('4')">4</div>
+                    <div class="teclado-botao" onclick="cliclou('5')">5</div>
+                    <div class="teclado-botao" onclick="cliclou('6')">6</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="cliclou('7')">7</div>
+                    <div class="teclado-botao" onclick="cliclou('8')">8</div>
+                    <div class="teclado-botao" onclick="cliclou('9')">9</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="cliclou('0')">0</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao botao-branco" onclick="branco()"><b>BRANCO</b></div>  
+                    <!-- onclick="branco" exemplo de como passar uma função para quando o botão for cliclado -->
+                    <div class="teclado-botao botao-corrige" onclick="corrige()"><b>CORRIGE</b></div>
+                    <div class="teclado-botao botao-confirma" onclick="confirma()"><b>CONFIRMA</b></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="etapas.js"></script>
+        <script src="funcoes.js"></script>
+    </body>
+</html>
